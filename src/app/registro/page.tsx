@@ -122,8 +122,8 @@ export default function Registro() {
             <Image
               src="/images/image.jpg"
               alt="Logo Bazar UNID"
-              width={150}
-              height={150}
+              width={500}
+              height={200}
               className="rounded-full"
             />
           </div>
