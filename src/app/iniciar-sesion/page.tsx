@@ -1,21 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button"; // Asegúrate de que este componente Button esté disponible en tu proyecto
+import { useRouter } from "next/navigation"; // Importamos el hook de enrutamiento
+import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 
 export default function CustomPage() {
-  const handleLoginClick = () => {
-    // Lógica para iniciar sesión
-  };
-
-  const handleInstitutionalEmailClick = () => {
-    // Lógica para correo institucional
-  };
+  const router = useRouter();
 
   const handleNextClick = () => {
     // Lógica para el siguiente paso
+  };
+
+  const handleForgotPasswordClick = () => {
+    // Redirige a la página "contraseña"
+    router.push("/contrasena");
   };
 
   return (
@@ -43,8 +43,17 @@ export default function CustomPage() {
         />
 
         {/* Botón Siguiente */}
-        <Button onClick={handleNextClick} className="w-full max-w-xs">
+        <Button onClick={handleNextClick} className="w-full max-w-xs mb-4">
           Siguiente
+        </Button>
+
+        {/* Botón ¿Olvidaste Contraseña? */}
+        <Button
+          variant="link"
+          onClick={handleForgotPasswordClick}
+          className="text-blue-500"
+        >
+          ¿Olvidaste Contraseña?
         </Button>
       </div>
     </div>
