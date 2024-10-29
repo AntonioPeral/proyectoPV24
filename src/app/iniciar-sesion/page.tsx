@@ -53,7 +53,7 @@ export default function CustomPage() {
           onClick={handleForgotPasswordClick}
           className="text-blue-500"
         >
-          ¿Olvidaste Contraseña?
+          ¿Olvidaste tu Contraseña?
         </Button>
       </div>
     </div>

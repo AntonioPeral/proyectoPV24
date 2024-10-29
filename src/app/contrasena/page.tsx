@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation"; // Importa useRouter
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export default function PasswordPage() {
   const [code, setCode] = useState(Array(6).fill("")); // Almacenamos un array para el código de 6 dígitos
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]); // Referencias a los inputs
+  const router = useRouter(); // Inicializa el router
 
   // Maneja el cambio en cada input
   const handleChange = (index: number, value: string) => {
@@ -33,7 +35,7 @@ export default function PasswordPage() {
   const handleSubmit = () => {
     const verificationCode = code.join(""); // Combina los 6 dígitos
     console.log("Código ingresado:", verificationCode);
-    // Aquí podrías manejar el envío del código
+    router.push("/confirmar-contrasena"); // Redirige a la página de reset
   };
 
   // Función para reenviar el código
@@ -62,7 +64,6 @@ export default function PasswordPage() {
         {code.map((digit, index) => (
           <Input
             key={index}
-          
             value={digit}
             onChange={(e) => handleChange(index, e.target.value)}
             onKeyDown={(e) => handleKeyDown(index, e)}
@@ -79,5 +80,6 @@ export default function PasswordPage() {
     </div>
   );
 }
+
 
   

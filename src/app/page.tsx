@@ -33,7 +33,7 @@ export default function Login() {
       {/* Botones de acción */}
       <div className="flex justify-center space-x-4 mt-4 w-full px-8">
         <Button className="w-1/4" onClick={handleLoginClick}>
-          Iniciar sesión
+          Iniciar Sesión
         </Button>
         <Button
           variant="outline"
