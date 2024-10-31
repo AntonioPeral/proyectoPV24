@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // Importamos el hook de enrutamiento
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
@@ -10,7 +10,8 @@ export default function CustomPage() {
   const router = useRouter();
 
   const handleNextClick = () => {
-    // Lógica para el siguiente paso
+    // Redirige a la página "Buscando" al hacer clic en "Ingresar"
+    router.push("/buscando");
   };
 
   const handleForgotPasswordClick = () => {
@@ -22,11 +23,11 @@ export default function CustomPage() {
     <div className="flex flex-col items-center justify-center min-h-screen py-4">
       {/* Imagen principal centrada */}
       <Image
-        src="/images/image.jpg" // Reemplaza con la ruta de tu imagen
+        src="/images/image.jpg"
         alt="Imagen Logo"
         width={400}
         height={450}
-        className="mx-auto mb-4" // Añade margen inferior para separar de otros elementos
+        className="mx-auto mb-4"
       />
 
       <Avatar className="w-40 h-40 mb-4">
@@ -42,9 +43,10 @@ export default function CustomPage() {
           className="mb-4 w-full max-w-xs"
         />
 
-        {/* Botón Siguiente */}
+        <Input placeholder="Contraseña" className="mb-4 w-full max-w-xs" />
+
         <Button onClick={handleNextClick} className="w-full max-w-xs mb-4">
-          Siguiente
+          Ingresar
         </Button>
 
         {/* Botón ¿Olvidaste Contraseña? */}
