@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Registro() {
@@ -10,8 +11,15 @@ export default function Registro() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const router = useRouter();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Puedes agregar aquí cualquier lógica adicional de validación o envío de datos
+
+    // Redirigir a la página confirmar-registro
+    router.push("/confirmar-registro");
   };
 
   return (
