@@ -1,43 +1,77 @@
+/* Estilo para el contenedor */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff0f; /* Fondo ligeramente transparente */
+
+  /* Centrado absoluto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+/* Estilo para el mensaje */
 .message {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000; /* Contraste con el fondo */
   text-align: center;
   margin-bottom: 20px;
-  font-size: 16px;
-  color: #333;
-  max-width: 400px;
 }
 
+/* Estilo para el input */
 .emailInput {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   padding: 10px;
-  font-size: 16px;
-  margin-bottom: 15px;
-  border: 1px solid #333;
+  border: 1px solid #cccccc;
   border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Contraste limpio */
+  transition: box-shadow 0.3s ease;
 }
 
+.emailInput:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  border-color: #007bff;
+}
+
+/* Estilo para los botones */
 .button {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   padding: 10px;
-  font-size: 16px;
-  margin-top: 10px;
-  border: 1px solid #333;
+  margin: 10px 0;
+  border: none;
   border-radius: 5px;
-  background-color: #fff;
-  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff; /* Azul vibrante */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #f0f0f0;
+  background-color: #0056b3;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Espaciado adicional para botones */
+.button:last-child {
+  margin-bottom: 0;
 }
