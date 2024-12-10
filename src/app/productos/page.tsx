@@ -16,11 +16,11 @@ const productsData: Product[] = [
   { id: 2, name: "Vestido Azul", price: 250, image: "/images/vestido.jpg" },
   { id: 3, name: "Tenis Adidas", price: 350, image: "/images/tenis.jpg" },
   { id: 4, name: "Zapatillas Plateadas", price: 450, image: "/images/zapatillas.jpg" },
-  { id: 5, name: "Sombrero de Paja", price: 120, image: "/images/sombrero.jpg" },
+  { id: 5, name: "Sombrero", price: 120, image: "/images/sombrero.jpg" },
   { id: 6, name: "Bolsa de Mano", price: 300, image: "/images/bolsa.jpg" },
   { id: 7, name: "Reloj Deportivo", price: 550, image: "/images/reloj.jpg" },
   { id: 8, name: "Camisa Blanca", price: 200, image: "/images/camisa.jpg" },
-  { id: 9, name: "Pantalón Jeans", price: 400, image: "/images/pantalon.jpg" },
+  
 ];
 
 export default function Tienda() {
