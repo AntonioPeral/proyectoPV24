@@ -64,6 +64,15 @@ export default function Login() {
           height={40}
         />
       </div>
+      
+      <footer className="mt-auto p-4 w-full flex justify-center space-x-4 bg-white border-t">
+        <button className="text-gray-600">Aviso de privacidad</button>
+        <button className="text-gray-600">Términos y condiciones</button>
+        <button className="text-gray-600">Acerca de</button>
+      </footer>
+
     </div>
   );
+ 
+  
 }

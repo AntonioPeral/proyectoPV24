@@ -77,6 +77,7 @@ export default function PasswordPage() {
       <Button onClick={handleSubmit} className="w-full max-w-xs">
         Continuar
       </Button>
+      
     </div>
   );
 }
