@@ -13,7 +13,19 @@ export default function Buscando() {
   };
 
   const handleMoreProductsClick = () => {
-    router.push("/productos"); // Redirige a la página de productos
+    router.push("/productos");
+  };
+
+  const handlePrivacyClick = () => {
+    router.push("/aviso"); // Redirige a la página de aviso de privacidad
+  };
+
+  const handleTermsClick = () => {
+    router.push("/terminos"); // Redirige a la página de términos
+  };
+
+  const handleAboutClick = () => {
+    router.push("/acerca"); // Redirige a la página Acerca de
   };
 
   return (
@@ -21,7 +33,6 @@ export default function Buscando() {
       {/* Header */}
       <header className="flex items-center w-full p-4 bg-white shadow-md">
         <div className="mr-auto flex items-center space-x-4">
-          {/* Imagen en la esquina superior izquierda */}
           <Image
             src="/images/image.jpg"
             alt="Logo"
@@ -117,9 +128,18 @@ export default function Buscando() {
 
       {/* Footer */}
       <footer className="mt-auto p-4 w-full flex justify-center space-x-4 bg-white border-t">
-        <button className="text-gray-600">Aviso de privacidad</button>
-        <button className="text-gray-600">Términos y condiciones</button>
-        <button className="text-gray-600">Acerca de</button>
+        <button
+          onClick={handlePrivacyClick}
+          className="text-gray-600 hover:underline"
+        >
+          Aviso de privacidad
+        </button>
+        <button onClick={handleTermsClick} className="text-gray-600 hover:underline">
+    Términos y condiciones
+  </button>
+  <button onClick={handleAboutClick} className="text-gray-600 hover:underline">
+    Acerca de
+  </button>
       </footer>
     </div>
   );

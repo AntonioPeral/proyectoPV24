@@ -14,7 +14,7 @@ export default function AvisoPrivacidad() {
       <main className="max-w-4xl bg-white shadow-lg rounded-lg p-6 mt-6 space-y-4 text-gray-800">
         <h2 className="text-xl font-semibold">Responsable de los Datos Personales</h2>
         <p>
-          La tienda de bazar, denominada <strong>"Tu Bazar de Confianza"</strong>,
+          La tienda de bazar, denominada <strong>"Bunid"</strong>,
           ubicada en [DIRECCIÓN DE LA TIENDA], es responsable del tratamiento de
           sus datos personales conforme a lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
         </p>
@@ -56,7 +56,7 @@ export default function AvisoPrivacidad() {
           Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al
           tratamiento de sus datos personales. Para ejercer estos derechos, por
           favor contáctenos en el correo electrónico{" "}
-          <strong>contacto@tubazar.com</strong> o al teléfono [NÚMERO DE CONTACTO].
+          <strong>contacto@bunid.com</strong> o al teléfono [NÚMERO DE CONTACTO].
         </p>
 
         <h2 className="text-xl font-semibold">Cambios en el Aviso de Privacidad</h2>
@@ -70,14 +70,14 @@ export default function AvisoPrivacidad() {
         <p>
           Si tiene dudas sobre este aviso de privacidad, puede comunicarse con
           nosotros en el correo electrónico{" "}
-          <strong>contacto@tubazar.com</strong> o visitarnos en nuestra tienda
+          <strong>contacto@bunid.com</strong> o visitarnos en nuestra tienda
           física en [DIRECCIÓN DE LA TIENDA].
         </p>
       </main>
 
       {/* Footer */}
       <footer className="w-full mt-auto p-4 bg-white shadow-md text-center text-gray-600">
-        &copy; {new Date().getFullYear()} Tu Bazar de Confianza. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} Bunid. Todos los derechos reservados.
       </footer>
     </div>
   );

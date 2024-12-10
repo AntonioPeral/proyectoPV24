@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Importamos el hook useRouter
 
 interface CartItem {
   id: number;
@@ -19,6 +20,7 @@ const initialCart: CartItem[] = [
 
 export default function Carrito() {
   const [cartItems, setCartItems] = useState<CartItem[]>(initialCart);
+  const router = useRouter(); // Inicializamos el router
 
   const handleRemoveItem = (id: number) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
@@ -106,7 +108,10 @@ export default function Carrito() {
             </div>
 
             {/* Botón de proceder */}
-            <button className="w-full py-3 mt-4 bg-blue-500 text-white text-lg font-semibold rounded hover:bg-blue-600">
+            <button
+              onClick={() => router.push("/metodopago")} // Redirección a la página de métodos de pago
+              className="w-full py-3 mt-4 bg-blue-500 text-white text-lg font-semibold rounded hover:bg-blue-600"
+            >
               Proceder al Pago
             </button>
           </div>
