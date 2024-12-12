@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 const ResetPasswordPage: React.FC = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter(); // Instancia del router
 
   // Maneja el envío del formulario
@@ -40,7 +39,7 @@ const ResetPasswordPage: React.FC = () => {
       {/* Input de Confirmar Contraseña */}
       <div className="mb-10">
         <Input
-          type={showConfirmPassword ? "text" : "password"}
+          type={"password"}
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           placeholder="Confirmar Contraseña"
