@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 const ResetPasswordPage: React.FC = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter(); // Instancia del router
 
@@ -30,7 +29,7 @@ const ResetPasswordPage: React.FC = () => {
       {/* Input de Nueva Contraseña */}
       <div className="mb-10">
         <Input
-          type={showPassword ? "text" : "password"}
+          type={"password"}
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
           placeholder="Nueva Contraseña"
