@@ -2,10 +2,15 @@
 
 import React, { useState } from "react";
 
+interface PaymentMethod {
+  paymentType: string;
+  details: string;
+}
+
 const MetodosDePago: React.FC = () => {
-  const [paymentMethods, setPaymentMethods] = useState<any[]>([]);
-  const [paymentType, setPaymentType] = useState("");
-  const [details, setDetails] = useState("");
+  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
+  const [paymentType, setPaymentType] = useState<string>("");
+  const [details, setDetails] = useState<string>("");
 
   const handleAddPaymentMethod = () => {
     if (!paymentType || !details) {
@@ -31,7 +36,9 @@ const MetodosDePago: React.FC = () => {
 
       {/* Formulario */}
       <main className="max-w-4xl bg-white shadow-lg rounded-lg p-6 mt-6 space-y-6">
-        <h2 className="text-xl font-semibold text-gray-800">Registrar un nuevo método de pago</h2>
+        <h2 className="text-xl font-semibold text-gray-800">
+          Registrar un nuevo método de pago
+        </h2>
 
         {/* Tipo de pago */}
         <div className="flex flex-col space-y-2">
@@ -47,10 +54,14 @@ const MetodosDePago: React.FC = () => {
             <option value="" disabled>
               Selecciona un tipo de pago
             </option>
-            <option value="Tarjeta de Crédito/Débito">Tarjeta de Crédito/Débito</option>
+            <option value="Tarjeta de Crédito/Débito">
+              Tarjeta de Crédito/Débito
+            </option>
             <option value="Depósito Bancario">Depósito Bancario</option>
             <option value="PayPal">PayPal</option>
-            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+            <option value="Transferencia Bancaria">
+              Transferencia Bancaria
+            </option>
           </select>
         </div>
 
@@ -80,7 +91,9 @@ const MetodosDePago: React.FC = () => {
         {/* Métodos de Pago Registrados */}
         {paymentMethods.length > 0 && (
           <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800">Métodos Registrados</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Métodos Registrados
+            </h3>
             <ul className="space-y-4 mt-4">
               {paymentMethods.map((method, index) => (
                 <li
@@ -88,7 +101,9 @@ const MetodosDePago: React.FC = () => {
                   className="flex justify-between items-center bg-gray-50 p-4 rounded shadow"
                 >
                   <div>
-                    <p className="font-medium text-gray-800">{method.paymentType}</p>
+                    <p className="font-medium text-gray-800">
+                      {method.paymentType}
+                    </p>
                     <p className="text-gray-600">{method.details}</p>
                   </div>
                   <button

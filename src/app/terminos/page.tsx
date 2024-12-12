@@ -42,7 +42,7 @@ const TerminosCondiciones: React.FC = () => {
         <p>
           Todo el contenido disponible en este sitio, incluyendo texto,
           imágenes, logotipos, y gráficos, es propiedad de{" "}
-          <strong>"Bunid"</strong> o de terceros autorizados. Está prohibido
+          <strong>Bunid</strong> o de terceros autorizados. Está prohibido
           reproducir, distribuir o utilizar dicho contenido sin autorización
           previa.
         </p>
